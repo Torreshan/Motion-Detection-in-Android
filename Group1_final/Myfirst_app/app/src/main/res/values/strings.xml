@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SPORTS HELPER</string>
+    <string name="button_selection1">Bluetooth</string>
+    <string name="Welcome">Welcome to the Sports Helper</string>
+    <color name="indigo">#9FA8DA</color>
+    <string-array name="connections_array">
+        <item>No input</item>
+        <item>Phone</item>
+        <item>Bluetooth</item>
+        <item>File</item>
+    </string-array>
+    <!--<string name="tv_show"-->
+
+</resources>

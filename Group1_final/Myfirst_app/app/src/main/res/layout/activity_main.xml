@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E"
+    tools:context="com.example.eddiesyn.myfirst_app.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/Bluetooth_start"
+        android:layout_width="175dip"
+        android:layout_height="235dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginStart="90dp"
+        android:onClick="ChooseBluetooth"
+        android:src="@drawable/logo"
+        android:text="@string/button_selection1"
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="378dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/Welcome"
+        android:textColor="#880E4F"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="387dp"
+        android:layout_height="460dp"
+        android:layout_marginBottom="150dp"
+        android:src="@drawable/messi2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

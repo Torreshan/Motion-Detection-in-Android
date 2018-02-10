@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.eddiesyn.myfirst_app"
+        minSdkVersion 22
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/2'] } }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+    compile 'com.github.rubensousa:raiflatbutton:0.1'
+    compile 'com.github.markushi:circlebutton:1.1'
+    //compile 'me.spark:submitbutton:1.0.0'
+//    compile 'com.roger.match.library:library:1.0.1'
+//    def htextview_version = "0.1.2"
+//// as 3.0 use implementation
+//    compile "com.hanks:htextview-base:$htextview_version"        // base library
+//    compile "com.hanks:htextview-fade:$htextview_version"        // optional
+//    compile "com.hanks:htextview-line:$htextview_version"        // optional
+//    compile "com.hanks:htextview-rainbow:$htextview_version"     // optional
+//    compile "com.hanks:htextview-typer:$htextview_version"       // optional
+//    compile "com.hanks:htextview-scale:$htextview_version"       // optional
+//    compile "com.hanks:htextview-evaporate:$htextview_version"   // optional
+//    compile "com.hanks:htextview-fall:$htextview_version"        // optional
+
+    //compile files('androidplot-core-0.5.1.jar')
+    //compile files('opencsv-2.3.jar')
+//    compile files('commons-math3-3.6.1.jar')
+//    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+
+}
